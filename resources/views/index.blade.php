@@ -1,100 +1,114 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="background-image grid grid-cols-1 m-auto">
-        <div class="flex text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    You like Animal?
-                </h1>
-                <a 
-                    href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
-                    View animals
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
-        </div>
-
-        <div class="m-auto sm:m-auto text-left w-4/5 block">
-            <h2 class="text-3xl font-extrabold text-gray-600">
-                Struggling to be a better web developer?
-            </h2>
-            
-            <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+    {{-- 🦁 Hero Section --}}
+    <div class="relative bg-cover bg-center h-[550px] flex items-center justify-center text-white" 
+         style="background-image: url('{{ asset('images/jaguard.jpg') }}');">
+        <div class="text-center backdrop-blur-sm bg-black/40 p-6 rounded-lg">
+            <h1 class="text-6xl font-extrabold uppercase drop-shadow-md">
+                Welcome to the Wild Side 🐾
+            </h1>
+            <p class="mt-4 text-lg">
+                Discover amazing creatures and their untamed beauty.
             </p>
-
-            <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
-            </p>
-
-            <a 
-                href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
-                Find Out More
+            <a href="/blog" 
+               class="mt-6 inline-block bg-green-600 hover:bg-green-700 transition text-white font-bold text-lg uppercase py-3 px-6 rounded-lg shadow-md">
+                Explore Animals
             </a>
         </div>
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
-        <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
-        </h2>
-
-        <span class="font-extrabold block text-4xl py-1">
-            Ux Design
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Project Management
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Backend Development
-        </span>
+    {{-- 🦓 Featured Animal Section --}}
+    <div class="sm:grid grid-cols-2 gap-12 w-4/5 mx-auto py-16">
+        <div>
+            <img src="{{ asset('images/Leopard.jpeg') }}" class="rounded-lg shadow-lg w-full" alt="Leopard">
+        </div>
+        <div class="flex flex-col justify-center">
+            <h2 class="text-4xl font-extrabold text-green-700">
+                The Stealthy Predator
+            </h2>
+            <p class="mt-4 text-gray-700">
+                Leopards are known for their strength and adaptability. Learn about their hunting techniques and survival skills.
+            </p>
+            <a href="/blog" 
+               class="mt-6 inline-block bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-700 transition">
+                Learn More
+            </a>
+        </div>
     </div>
 
-    <div class="text-center py-15">
-        <span class="uppercase text-s text-gray-400">
-            Blog
-        </span>
+    {{-- 🦅 Expertise Section --}}
+    <div class="bg-green-900 text-white text-center py-16">
+        <h2 class="text-2xl font-semibold mb-6">I specialize in...</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-3xl font-bold">
+            <span class="py-2">Wildlife Photography 📷</span>
+            <span class="py-2">Animal Conservation 🌍</span>
+            <span class="py-2">Nature Blogging ✍️</span>
+            <span class="py-2">Sustainable Travel 🚀</span>
+        </div>
+    </div>
 
-        <h2 class="text-4xl font-bold py-10">
-            Recent Posts
-        </h2>
-
-        <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
+    {{-- 🐘 Blog Section --}}
+    <div class="text-center py-16">
+        <span class="text-gray-500 uppercase tracking-widest">Blog</span>
+        <h2 class="text-4xl font-extrabold mt-4 text-green-800">Discover More About Wildlife</h2>
+        <p class="mt-4 w-4/5 mx-auto text-gray-600">
+            Explore stories, facts, and conservation efforts to help preserve our planet’s incredible wildlife.
         </p>
     </div>
 
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
-                    PHP
-                </span>
-
-                <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi ex? Nemo hic placeat et?
-                </h3>
-
-                <a 
-                    href=""
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                    Find Out More
-                </a>
-            </div>
+    {{-- 🦉 Recent Blog Posts --}}
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 w-4/5 mx-auto gap-12">
+        {{-- 🐺 Wolves --}}
+        <div class="bg-yellow-700 text-white p-8 rounded-lg shadow-lg">
+            <img src="{{ asset('images/wolves.jpg') }}" class="rounded-lg shadow-md mb-4 w-full h-48 object-cover" alt="Wolf">
+            <h3 class="text-xl font-bold my-4">The Wild Wolves</h3>
+            <p class="text-sm">
+                Wolves are intelligent and powerful pack hunters. Learn about their behaviors, habitats, and role in the ecosystem.
+            </p>
+            <a href="#" class="block mt-4 text-white font-bold underline">Read More</a>
         </div>
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
+
+        {{-- 🦢 Flamingo --}}
+        <div class="bg-blue-700 text-white p-8 rounded-lg shadow-lg">
+            <img src="{{ asset('images/Flamingo.png') }}" class="rounded-lg shadow-md mb-4 w-full h-48 object-cover" alt="Flamingo">
+            <h3 class="text-xl font-bold my-4">The Elegant Flamingos</h3>
+            <p class="text-sm">
+                These vibrant birds are known for their stunning pink color and graceful movement. Discover their fascinating world.
+            </p>
+            <a href="#" class="block mt-4 text-white font-bold underline">Read More</a>
+        </div>
+
+        {{-- 🐼 Red Pandas --}}
+        <div class="bg-red-700 text-white p-8 rounded-lg shadow-lg">
+            <img src="{{ asset('images/Red panda.jpg') }}" class="rounded-lg shadow-md mb-4 w-full h-48 object-cover" alt="Red Panda">
+            <h3 class="text-xl font-bold my-4">The Adorable Red Pandas</h3>
+            <p class="text-sm">
+                Known for their playful nature and fluffy tails, red pandas are a favorite among wildlife lovers.
+            </p>
+            <a href="#" class="block mt-4 text-white font-bold underline">Read More</a>
         </div>
     </div>
+
+    {{-- 🦚 More Animals --}}
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 w-4/5 mx-auto gap-8 py-16">
+        <div class="text-center">
+            <img src="{{ asset('images/Elephant.jpg') }}" class="rounded-lg shadow-lg w-full h-48 object-cover" alt="Elephant">
+            <p class="text-lg font-bold mt-2">Elephants</p>
+        </div>
+        <div class="text-center">
+            <img src="{{ asset('images/secretary birds.jpg') }}" class="rounded-lg shadow-lg w-full h-48 object-cover" alt="Secretary Bird">
+            <p class="text-lg font-bold mt-2">Secretary Bird</p>
+        </div>
+        <div class="text-center">
+            <img src="{{ asset('images/peacock.jpg') }}" class="rounded-lg shadow-lg w-full h-48 object-cover" alt="Peacock">
+            <p class="text-lg font-bold mt-2">Peacock</p>
+        </div>
+        <div class="text-center">
+            <img src="{{ asset('images/orcas.jpg') }}" class="rounded-lg shadow-lg w-full h-48 object-cover" alt="Orcas">
+            <p class="text-lg font-bold mt-2">Orcas</p>
+        </div>
+    </div>
+
 @endsection
